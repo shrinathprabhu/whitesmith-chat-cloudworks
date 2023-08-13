@@ -21,10 +21,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/store.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ['~/components', '~/components/base'],
+  components: ['~/components', '~/components/Base', '~/components/UserPanel'],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
