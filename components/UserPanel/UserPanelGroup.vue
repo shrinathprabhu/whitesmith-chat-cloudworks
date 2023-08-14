@@ -23,11 +23,11 @@ export default {
 <template>
   <section class="flex flex-col gap-4">
     <div class="flex justify-center items-center gap-1">
-      <span class="text-gray-400 font-[500]">{{
+      <span class="text-sm text-gray-400 font-[500]">{{
         roleToDisplayName[group.role]
       }}</span>
       <div
-        class="uppercase bg-gray-300 text-white rounded-full px-2 text-sm flex justify-center items-center"
+        class="uppercase bg-gray-300 text-white rounded-full px-2 text-xs flex justify-center items-center"
       >
         {{ group.members.length }}
       </div>

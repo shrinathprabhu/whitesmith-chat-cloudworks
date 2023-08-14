@@ -24,9 +24,15 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div
+    class="flex flex-col bg-white transition-[width] duration-300 max-w-full min-w-20"
+    :class="{
+      'w-44': !expanded,
+      'w-96': expanded,
+    }"
+  >
     <button
-      class="flex justify-center items-center gap-1 bg-blue-300 hover:bg-blue-400 text-white text-lg p-2 border border-solid border-blue-300 hover:border-blue-400 transition-colors duration-300"
+      class="flex justify-center items-center gap-2 bg-blue-300 hover:bg-blue-400 text-white text-lg p-2 border border-solid border-blue-300 hover:border-blue-400 transition-colors duration-300"
       @click.stop="expanded = !expanded"
     >
       <IconsArrowInCircle
@@ -38,7 +44,7 @@ export default {
       Members
     </button>
     <div class="overflow-y-auto" style="height: calc(100vh - 96px)">
-      <div class="flex flex-col flex-grow p-10 gap-12">
+      <div class="flex flex-col flex-grow p-8 gap-12">
         <UserPanelGroup
           v-for="group in groups"
           :key="group.role"

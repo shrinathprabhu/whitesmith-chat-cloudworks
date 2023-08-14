@@ -14,11 +14,13 @@ export default {
 </script>
 
 <template>
-  <div class="flex items-center gap-4">
-    <UserPanelPicture :member="member" />
-    <div class="flex flex-col">
+  <div class="flex items-center">
+    <div class="mx-5 h-16 aspect-square">
+      <UserPanelPicture :member="member" />
+    </div>
+    <div v-show="expanded" class="flex flex-col overflow-hidden">
       <div class="flex items-center gap-2">
-        <span class="font-[500]">{{ member.name }}</span>
+        <span class="font-[500] whitespace-nowrap">{{ member.name }}</span>
         <div
           class="border border-solid border-gray-300 rounded-full px-2 text-xs text-gray-400 uppercase"
         >
@@ -29,8 +31,10 @@ export default {
         member.location
       }}</span>
     </div>
-    <div class="ml-auto">
-      <button class="border border-solid rounded-lg border-gray-300 p-2">
+    <div v-show="expanded" class="ml-auto">
+      <button
+        class="border border-solid rounded-lg outline-none border-gray-300 p-2 focus-visible:ring-2"
+      >
         <IconsMessageBubble
           :class="{
             'text-green-400': member.online,
