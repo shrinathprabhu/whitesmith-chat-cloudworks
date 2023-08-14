@@ -11,7 +11,10 @@ export default {
 
 <template>
   <div class="relative flex justify-center">
-    <img :src="member.profileImage" class="rounded-lg w-12 h-12" />
+    <img
+      :src="member.profileImage"
+      class="rounded-lg h-16 aspect-square object-contain object-center"
+    />
     <div
       v-if="member.online"
       class="bg-green-600 w-3 h-3 rounded-full absolute -top-1 -right-1"

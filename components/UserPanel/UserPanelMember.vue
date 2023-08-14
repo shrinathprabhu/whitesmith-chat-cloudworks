@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex items-center gap-4">
     <UserPanelPicture :member="member" />
     <div class="flex flex-col">
       <div class="flex items-center gap-2">

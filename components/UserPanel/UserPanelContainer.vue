@@ -31,7 +31,7 @@ export default {
     >
       Members
     </button>
-    <div class="flex flex-col">
+    <div class="flex flex-col p-10 gap-12">
       <UserPanelGroup
         v-for="group in groups"
         :key="group.role"

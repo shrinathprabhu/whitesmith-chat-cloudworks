@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <section class="flex flex-col">
+  <section class="flex flex-col gap-4">
     <div class="flex justify-center items-center gap-1">
       <span class="text-gray-400 font-[500]">{{
         roleToDisplayName[group.role]
@@ -32,7 +32,7 @@ export default {
         {{ group.members.length }}
       </div>
     </div>
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-8">
       <UserPanelMember
         v-for="member in group.members"
         :key="member.id"
