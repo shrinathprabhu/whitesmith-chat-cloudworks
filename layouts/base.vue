@@ -1,15 +1,3 @@
-<script>
-import AppHeader from '~/components/Base/AppHeader.vue'
-import AppSidebar from '~/components/Base/AppSidebar.vue'
-
-export default {
-  components: {
-    AppHeader,
-    AppSidebar,
-  },
-}
-</script>
-
 <template>
   <div class="h-screen flex flex-col overflow-hidden">
     <div>
