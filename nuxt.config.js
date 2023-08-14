@@ -26,7 +26,11 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   // Auto importing components from Base and UserPanel and making it available globally
-  components: ['~/components', '~/components/Base', '~/components/UserPanel'],
+  components: [
+    '~/components',
+    '~/components/BaseComponents',
+    '~/components/UserPanel',
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
