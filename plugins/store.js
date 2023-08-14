@@ -1,6 +1,11 @@
 import Vue from 'vue'
 
 const state = Vue.observable({
+  // Members of the project
+  // Currently static as we don't have a backend
+  // TODO: Add a mutation function that backend api/ socket message can call
+  // and update the state of members
+  // Assume that profileImage is a link to the image that is supplied from the backend
   members: [
     {
       id: 1,
@@ -31,6 +36,8 @@ const state = Vue.observable({
       location: 'office',
       department: 'd2',
       status: 'Troubleshooting',
+      // TODO: Add a generative placeholder image for the profile image
+      // Create a method that generates a placeholder image based on the name
       profileImage:
         'https://via.placeholder.com/160x160.png/faebbd/f2994a?Text=JN',
       online: false,
@@ -93,6 +100,7 @@ const state = Vue.observable({
   ],
 })
 
+// Injecting the store into the Vue instance
 export default (_, inject) => {
   inject('store', { state })
 }

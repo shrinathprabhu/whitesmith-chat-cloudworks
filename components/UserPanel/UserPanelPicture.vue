@@ -2,6 +2,7 @@
 export default {
   props: {
     member: {
+      // TODO: Add typescript for better type checking and maintainability
       type: Object,
       required: true,
     },

@@ -23,6 +23,7 @@ export default {
 }
 </script>
 
+<!-- TODO: handle responsiveness for mobile layout -->
 <template>
   <div
     class="flex flex-col bg-white transition-[width] duration-300 max-w-full min-w-20"
