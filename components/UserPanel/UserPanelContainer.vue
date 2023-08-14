@@ -26,9 +26,15 @@ export default {
 <template>
   <div class="flex flex-col">
     <button
-      class="flex justify-center bg-blue-300 hover:bg-blue-400 text-white text-lg p-2 border border-solid border-blue-300 hover:border-blue-400 transition-colors duration-300"
+      class="flex justify-center items-center gap-1 bg-blue-300 hover:bg-blue-400 text-white text-lg p-2 border border-solid border-blue-300 hover:border-blue-400 transition-colors duration-300"
       @click.stop="expanded = !expanded"
     >
+      <IconsArrowInCircle
+        class="transform transition-transform duration-300"
+        :class="{
+          'rotate-180': expanded,
+        }"
+      />
       Members
     </button>
     <div class="overflow-y-auto" style="height: calc(100vh - 96px)">
