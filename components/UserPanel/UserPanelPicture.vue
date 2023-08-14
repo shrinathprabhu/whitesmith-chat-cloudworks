@@ -21,7 +21,7 @@ export default {
     ></div>
     <div
       v-if="member.status"
-      class="bg-gray-100 text-gray-400 rounded-full absolute -bottom-4 text-xs whitespace-nowrap max-w-[200px] text-ellipsis overflow-hidden p-1"
+      class="bg-gray-100 text-gray-400 rounded-full absolute -bottom-4 text-xs whitespace-nowrap max-w-[200px] text-ellipsis overflow-hidden py-1 px-3"
     >
       {{ member.status }}
     </div>

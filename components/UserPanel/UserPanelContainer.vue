@@ -31,13 +31,15 @@ export default {
     >
       Members
     </button>
-    <div class="flex flex-col p-10 gap-12">
-      <UserPanelGroup
-        v-for="group in groups"
-        :key="group.role"
-        :group="group"
-        :expanded="expanded"
-      />
+    <div class="overflow-y-auto" style="height: calc(100vh - 96px)">
+      <div class="flex flex-col flex-grow p-10 gap-12">
+        <UserPanelGroup
+          v-for="group in groups"
+          :key="group.role"
+          :group="group"
+          :expanded="expanded"
+        />
+      </div>
     </div>
   </div>
 </template>
